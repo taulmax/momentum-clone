@@ -63,4 +63,4 @@ function init() {
     toDoForm.addEventListener("submit", handleSubmit);
 }
 
-init()
+init();
