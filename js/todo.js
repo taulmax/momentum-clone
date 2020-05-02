@@ -6,6 +6,19 @@ const TODOS_LS = "toDos";
 
 let toDos = [];
 
+function showToDo() {
+    toDoForm.classList.remove("toDoForm");
+}
+
+function handleToDo() {
+    const currentUser = localStorage.getItem("currentUser");
+    if (currentUser) {
+        showToDo();
+    } else {
+        greetingForm.addEventListener("submit", showToDo);
+    }
+}
+
 function deleteToDo(event) {
     btn = event.target;
     li = btn.parentNode;
@@ -28,7 +41,7 @@ function paintToDo(text) {
     delBtn.addEventListener("click", deleteToDo);
     const newId = toDos.length + 1;
     span.innerText = text;
-    delBtn.innerHTML = "❌";
+    delBtn.innerHTML = "-";
     li.id = newId;
     li.appendChild(delBtn);
     li.appendChild(span);
@@ -61,6 +74,7 @@ function loadToDos() {
 function init() {
     loadToDos();
     toDoForm.addEventListener("submit", handleSubmit);
+    handleToDo();
 }
 
 init();

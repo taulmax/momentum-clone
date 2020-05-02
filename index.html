@@ -4,28 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/styles.css">
     <title>M2racle</title>
 </head>
 
 <body>
-    <div class="js-clock">
-        <h1 class="js-title">00:00</h1>
+    <div class="js-clock clock">
+        <span class="js-title time">00:00</span>
     </div>
     <form class="js-form form">
-        <input type="text" placeholder="What is your name?">
+        <span class="form-text">Hello, What's your name?</span>
+        <input type="text">
     </form>
     <h4 class="js-greetings greetings"></h4>
-    <form class="js-toDoForm">
-        <input type="text" placeholder="Write a to do">
+    <form class="js-toDoForm toDoForm todoform">
+        <span class="toDoForm-text">What is your main focus today?</span>
+        <input type="text">
     </form>
-    <ul class="js-toDoList"></ul>
-    <span class="js-weather"></span>
-    <script src="clock.js"></script>
-    <script src="greeting.js"></script>
-    <script src="todo.js"></script>
-    <script src="bg.js"></script>
-    <script src="weather.js"></script>
+    <ul class="js-toDoList todolist"></ul>
+    <div class="weatherplace">
+        <span class="js-place place"></span>
+        <span class="js-weather weather"></span>
+    </div>
+    <script src="js/clock.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/bg.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 
 </html>

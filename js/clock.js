@@ -1,5 +1,19 @@
 const clockContainer = document.querySelector(".js-clock");
-const clockTitle = clockContainer.querySelector("h1");
+const clockTitle = clockContainer.querySelector("span");
+const greetingForm = document.querySelector(".js-form");
+
+function showClock() {
+    clockContainer.classList.remove("clock");
+}
+
+function handleClock() {
+    const currentUser = localStorage.getItem("currentUser");
+    if (currentUser) {
+        showClock();
+    } else {
+        greetingForm.addEventListener("submit", showClock);
+    }
+}
 
 function getTime() {
     const date = new Date();
@@ -13,6 +27,7 @@ function getTime() {
 function init() {
     getTime();
     setInterval(getTime, 1000);
+    handleClock();
 }
 
 init();

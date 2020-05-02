@@ -1,0 +1,23 @@
+.weatherplace {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.weather {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+.place {
+    font-size: 18px;
+}
