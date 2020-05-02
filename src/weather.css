@@ -9,6 +9,8 @@
     align-items: center;
     margin-top: 15px;
     margin-right: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
 }
 
 .weather {
